@@ -4,16 +4,12 @@
     <head>
         
         <meta charset="utf-8" />
-        <title>Dashboard | OnlineGo - Online Traffikskole</title>
+        <title>Email/SMS | OnlineGo - Online Traffikskole</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-        <link rel="stylesheet" type="text/css" href="assets/libs/tui-time-picker/tui-time-picker.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/libs/tui-date-picker/tui-date-picker.min.css">
-        <link href="assets/libs/tui-calendar/tui-calendar.min.css" rel="stylesheet" type="text/css" />
 
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -356,17 +352,16 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+                                    <h4 class="mb-sm-0 font-size-18">Alert Email</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">OnlineGo</a></li>
-                                            <li class="breadcrumb-item active">Dasboard</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Email Template</a></li>
+                                            <li class="breadcrumb-item active">Alert Email</li>
                                         </ol>
                                     </div>
 
@@ -376,103 +371,64 @@
                         <!-- end page title -->
 
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div id="lnb">
-                                            
-
-                                            <div id="right">
-                                                <div id="menu" class="mb-3">
-                                                    
-                                                    <span id="menu-navi" class="d-sm-flex flex-wrap text-center text-sm-start justify-content-sm-between">
-                                                        <div class="d-sm-flex flex-wrap gap-1">
-                                                            <div class="btn-group mb-2" role="group" aria-label="Basic example">
-                                                                <button type="button" class="btn btn-primary move-day" data-action="move-prev">
-                                                                    <i class="calendar-icon ic-arrow-line-left mdi mdi-chevron-left" data-action="move-prev"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary move-day" data-action="move-next">
-                                                                    <i class="calendar-icon ic-arrow-line-right mdi mdi-chevron-right" data-action="move-next"></i>
-                                                                </button>
-                                                            </div>
-                                                            
-                                                            
-                                                            <button type="button" class="btn btn-primary move-today mb-2" data-action="move-today">Today</button>
-                                                        </div>
-
-                                                        <h4 id="renderRange" class="render-range fw-bold pt-1 mx-3"></h4>
-
-                                                        <div class="dropdown align-self-start mt-3 mt-sm-0 mb-2">
-                                                            <button id="dropdownMenu-calendarType" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                                aria-haspopup="true" aria-expanded="true">
-                                                                <i id="calendarTypeIcon" class="calendar-icon ic_view_month" style="margin-right: 4px;"></i>
-                                                                <span id="calendarTypeName">Dropdown</span>&nbsp;
-                                                                <i class="calendar-icon tui-full-calendar-dropdown-arrow"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="dropdownMenu-calendarType">
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-daily">
-                                                                        <i class="calendar-icon ic_view_day"></i>Daily
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-weekly">
-                                                                        <i class="calendar-icon ic_view_week"></i>Weekly
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-monthly">
-                                                                        <i class="calendar-icon ic_view_month"></i>Month
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-weeks2">
-                                                                        <i class="calendar-icon ic_view_week"></i>2 weeks
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-weeks3">
-                                                                        <i class="calendar-icon ic_view_week"></i>3 weeks
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation" class="dropdown-divider"></li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-workweek">
-                                                                        <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-workweek" checked>
-                                                                        <span class="checkbox-title"></span>Show weekends
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-start-day-1">
-                                                                        <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-start-day-1">
-                                                                        <span class="checkbox-title"></span>Start Week on Monday
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-narrow-weekend">
-                                                                        <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-narrow-weekend">
-                                                                        <span class="checkbox-title"></span>Narrower than weekdays
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </span>
-                                                    
-                                                </div>
+                            <div class="col-12">
+                                <table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
+                                    <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                        <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
+                                        <td class="container" width="600" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;" valign="top">
+                                            <div class="content" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+                                                <table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 7px; background-color: #fff; color: #495057; margin: 0; box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);" bgcolor="#fff">
+                                                    <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                        <td class="alert alert-warning" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 7px 7px 0 0; background-color: #556ee6; margin: 0; padding: 20px;" align="center" bgcolor="#71b6f9" valign="top">
+                                                            Warning: You're approaching your limit. Please upgrade.
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                        <td class="content-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
+                                                            <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                    <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                                                        You have <strong style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><span style="background-color: #f46a6a;color: #ffffff;padding: 5px 8px; font-size: 12px; border-radius: 4px">1
+                                                                                    free report</span></strong> remaining.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                    <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                                                        Add your credit card now to upgrade your account to a premium plan to ensure you don't miss out on any reports.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                    <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                                                        <a href="#" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #34c38f; margin: 0; border-color: #34c38f; border-style: solid; border-width: 8px 16px;">Upgrade
+                                                                            my account</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                    <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                                                        Thanks for choosing <b>OnlineGo</b> Admin.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                    <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                                                        <b>OnlineGo</b>
+                                                                        <p>Support Team</p>
+                                                                    </td>
+                                                                </tr>
+        
+                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                                                    <td class="content-block" style="text-align: center;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top">
+                                                                        © 2021 OnlineGo
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
-
-                                            <div class="lnb-new-schedule float-sm-end ms-sm-3 mt-4 mt-sm-0">
-                                                <button id="btn-new-schedule" type="button" class="btn btn-primary lnb-new-schedule-btn" data-toggle="modal">
-                                                    New schedule</button>
-                                            </div>
-                                            <div id="calendarList" class="lnb-calendars-d1 mt-4 mt-sm-0 me-sm-0 mb-4"></div>
-                                            
-                                            
-                                            <div id="calendar" style="height: 800px;"></div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- end table -->
                             </div>
                         </div>
                         <!-- end row -->
@@ -481,6 +437,7 @@
                 </div>
                 <!-- End Page-content -->
 
+                
                 <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
@@ -552,7 +509,7 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-        
+
         <!-- JAVASCRIPT -->
         <script src="assets/libs/jquery/jquery.min.js"></script>
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -560,22 +517,6 @@
         <script src="assets/libs/simplebar/simplebar.min.js"></script>
         <script src="assets/libs/node-waves/waves.min.js"></script>
 
-        <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
-        <script src="assets/libs/tui-dom/tui-dom.min.js"></script>
-
-        <script src="assets/libs/tui-time-picker/tui-time-picker.min.js"></script>
-        <script src="assets/libs/tui-date-picker/tui-date-picker.min.js"></script>
-        
-        <script src="assets/libs//moment/min/moment.min.js"></script>
-        <script src="assets/libs/chance/chance.min.js"></script>
-
-        <script src="assets/libs/tui-calendar/tui-calendar.min.js"></script>
-
-        <script src="assets/js/pages/calendars.js"></script>
-        <script src="assets/js/pages/schedules.js"></script>
-        <script src="assets/js/pages/calendar.init.js"></script>
-
-        <!-- App js -->
         <script src="assets/js/app.js"></script>
 
     </body>
