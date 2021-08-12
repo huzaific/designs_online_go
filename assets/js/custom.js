@@ -3,6 +3,15 @@ $(document).ready(function () {
         var id = $(this).data('details');
         $('table.school-hidden').hide();
         $('#'+id).show();
+        $('li').removeClass('Addselected');
+        $(this).addClass('Addselected');
+    });
+
+    $("li.school").click(function() {
+        $(this).siblings("li").css("backgroundColor", "");
+        $(this).animate({
+            backgroundColor: '#0000FF'
+        }, 'fast');
     });
 
     // Assign class

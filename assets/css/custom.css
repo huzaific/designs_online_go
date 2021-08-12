@@ -4,6 +4,9 @@
     margin: 20px 0;
 }
 
+.school-hidden tr:first-child td {
+    border: none;
+}
 .school-hidden tr:last-child td {
     width: 100%;
     border: none;
@@ -14,4 +17,8 @@ div#assignClassShow {
     padding: 20px 0;
     font-size: 16px;
     color: #f37a2a;
+}
+.Addselected{
+    background:#f9f9f9; 
+    -webkit-transition:all 0.25s linear; -moz-transition:all 0.25s linear
 }
