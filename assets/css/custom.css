@@ -20,5 +20,69 @@ div#assignClassShow {
 }
 .Addselected{
     background:#f9f9f9; 
-    -webkit-transition:all 0.25s linear; -moz-transition:all 0.25s linear
+    -webkit-transition:all 0.25s linear;
+    /* -moz-transition:all 0.25s linear */
+}
+.student-info h5.card-title {
+    font-size: 13px;
+}
+.studenthistory h6 {
+    background: #f37a2a;
+    padding: 10px;
+    color: #fff;
+}
+
+.studenthistory {
+    padding: 0px;
+    margin: 0px;
+}
+
+.studenthistory ul li::before {
+    content: "og";
+    position: absolute;
+    left: 0;
+    background: #777;
+    width: 20px;
+    text-align: center;
+    padding: 0px;
+    font-weight: 600;
+    color: #fff;
+}
+.studenthistory ul li {
+    list-style: none;
+}
+.studenthistory .active::before {
+    background: #f37a2a;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+}
+.studenthistory ul li p .text-mute {
+    color: #b9b7b7;
+}
+.studenthistory-subheader {
+    display: flex;
+    padding: 10px;
+    background: #cccccc;
+}
+
+.student-activities-subhead {
+    padding: 3px 15px;
+    background: #ffeadc;
+}
+.student-activities-subhead i {
+    margin-top: 10px;
+}
+.std-activites-body-inner {
+    background: #fff;
+    padding: 5px 10px;
+}
+
+.std-activites-body-inner p {
+    margin: 0;
+}
+.std-activites-body-inner {
+    background: #fff;
+    padding: 5px 10px;
+    margin-bottom: 5px;
 }
