@@ -1,0 +1,111 @@
+.myrunningcar {
+    background: url("../img/tt-promo-02-moving-bg-1-1024x417.jpg") bottom left repeat-x;
+    height: 400px;
+    background-repeat: repeat-x;
+    width: 100%;
+}
+
+
+
+@keyframes wheel{
+  from
+    {
+        transform: rotate(-0deg);
+    }
+    to
+    {
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes moving {
+  from {
+    right: -80em;
+    animation-timing-function: ease-out;
+  }
+  to {
+    right: 80%;
+    animation-timing-function: ease-in;
+  }
+  
+}
+
+@keyframes stableWheel {
+  from {transform: translateY(-.0em);}
+  to {transform: translateY(-.0em);}
+}
+
+/*.carparkicon{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  width: 400px;
+  height:271px;
+  overflow:hidden;
+  top: 30px;
+  background: url('https://onlinetrafikk.no/wp-content/uploads/2017/10/car-limiter-1.png') repeat-x;
+  background-repeat: repeat-x;
+  z-index: 201;
+    animation: moving 10s linear -2s infinite;
+}*/
+
+.car{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  width: 600px;
+  height:271px;
+  overflow:hidden;
+  top: 90px;
+    animation: moving 10s linear -2s infinite;
+}
+.carbody{
+  animation: carmove 3.1s infinite linear;
+  background: url("../img/carObj.png");
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 271px;
+  position: relative; 
+  width: 600px;
+  z-index: 125;
+}
+
+
+
+.weel{
+
+  animation: wheel 0.7s infinite linear;
+  background: url("../img/car-wheel-1.png") 0 0;
+  height: 60px;
+  position: absolute;
+  top: 72%;
+  width: 64px;
+  z-index: 200;
+  background-size: cover;
+}
+.weel1{left: 85px;}
+.weel2{left: 370px;}
+
+/*animations*/
+@keyframes carmove{
+  0%{transform: translateY(0px);}
+  25%{transform: translateY(1px)}
+  29%{transform: translateY(2px)}
+  33%{transform: translateY(3px)}
+  47%{transform: translateY(0px)}
+  58%{transform: translateY(1px)}
+  62%{transform: translateY(2px)}
+  66%{transform: translateY(3px)}
+  75%{transform: translateY(1px)}
+  100%{transform: translateY(0px)}
+}
+
+.stopedWeel{
+     animation: stableWheel .2s linear infinite alternate;
+  
+}
