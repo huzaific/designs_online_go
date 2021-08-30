@@ -4,7 +4,7 @@
 <head>
     
     <meta charset="utf-8" />
-    <title>Manage Teacher | OnlineGo - Online Traffikskole</title>
+    <title>Manage Courses | OnlineGo - Online Traffikskole</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -357,12 +357,32 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-certification"></i>
+                                <span key="t-maange-courses">Courses Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-courses.html" key="t-maange-courses">Manage Courses</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-maange-courses">Add New Course</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="bx bx-user-plus"></i>
                                 <span key="t-maange-teacher">Teacher Manage</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="manage-teacher.html" key="t-inbox">Manage Teacher</a></li>
                                 <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-user-pin"></i>
+                                <span key="t-maange-student">Student Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-student.html" key="t-inbox">Manage Student</a></li>
+                                <li><a href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,12 +406,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Mamnage Teacher</h4>
+                                <h4 class="mb-sm-0 font-size-18">Manage Courses</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Manage Teacher</a></li>
-                                        <li class="breadcrumb-item active">Teacher</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Manage Courses</a></li>
+                                        <li class="breadcrumb-item active">Courses</li>
                                     </ol>
                                 </div>
 
@@ -443,16 +463,16 @@
                             </div>
                         </div>
 
-                        <!-- Add teacher -->
+                        <!-- Add Courses -->
                         <div class="col-lg-12 mb-3">
-                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg">Add new teacher</button>
+                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">Add new Course</button>
 
-                             <!-- addTeachers Backdrop Modal -->
-                             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                             <!-- Add Course Backdrop Modal -->
+                             <div class="modal fade bs-Course-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="myLargeModalLabel">Add new teacher</h5>
+                                            <h5 class="modal-title" id="myLargeModalLabel">Add new Course</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -460,123 +480,34 @@
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="Firstname">Firstname
+                                                            <label for="Cousename">Course Name
                                                             </label>
-                                                            <input id="Firstname" name="Firstname" type="text" class="form-control">
+                                                            <input id="Cousename" name="Cousename" type="text" class="form-control">
                                                         </div>
                                                     </div>
+                                                   
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="surename">Sure Name</label>
-                                                            <input id="surename" name="surename" type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="mobileno">Mobile No
-                                                            </label>
-                                                            <input id="mobileno" name="mobileno" type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="email">Email
-                                                            </label>
-                                                            <input id="email" name="email" type="email" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="Social Security Number">Social Security Number</label>
-                                                            <input id="Social Security Number" name="ssnumber" type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="Title">Title</label>
+                                                            <label for="Title">Select Class</label>
                                                             <select class="form-control form-control select2" style="width: 370px; display: block;">
                                                                 <option>Select</option>
-                                                                <option value="FA">Administrator</option>
-                                                                <option value="EL">Teacher</option>
+                                                                <option value="A">Class A</option>
+                                                                <option value="B">Class B</option>
                                                             </select>
                                                             
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="Title">Gender</label>
+                                                            <label for="Title">Status</label>
                                                             <select class="form-control select2" style="width: 370px; display: block;">
                                                                 <option>Select</option>
-                                                                <option value="male">Male</option>
-                                                                <option value="EL">Female</option>
-                                                                <option value="EL">Others</option>
+                                                                <option value="male">Active</option>
+                                                                <option value="EL">In-Active</option>
                                                             </select>
                                                             
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="Title">School</label>
-                                                            <select class="select2 form-control select2-multiple"
-                                                            multiple="multiple" data-placeholder="Choose ..." style="width: 370px; display: block;">
-                                                                <option>Select</option>
-                                                                <option value="male">School A</option>
-                                                                <option value="EL">School B</option>
-                                                                <option value="EL">School C</option>
-                                                            </select>
-                                                            
-                                                        </div>
-                                                    </div>
-            
-                                                    <div class="col-lg-12 col-md-12">
-                                                        <h4>Rights</h4>
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <input class="form-check-input" id="container" type="checkbox" name="container">
-                                                            <label class="form-check-label" for="container">Show as an employee of TabsWeb</label>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <input class="form-check-input" id="Favorite" type="checkbox" name="Favorite">
-                                                            <label class="form-check-label" for="Favorite">Favorite</label>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <input class="form-check-input" id="two" type="checkbox" name="two">
-                                                            <label class="form-check-label" for="two">Show email on Tabs</label>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <input class="form-check-input" id="three" type="checkbox" name="three">
-                                                            <label class="form-check-label" for="three">Show mobile on Tabs</label>
-                                                            
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <input class="form-check-input" id="four" type="checkbox" name="four">
-                                                            <label class="form-check-label" for="four">Administrator</label>
-                                                            
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <input class="form-check-input" id="five" type="checkbox" name="five">
-                                                            <label class="form-check-label" for="five">Traffic Instructor</label>
-                                                            
-                                                        </div>
-                                                    </div>
-
                                                 </div>
             
                                                 <div class="modal-footer">
@@ -595,15 +526,8 @@
                                 <div class="card-header bg-transparent border-bottom">
                                     <div class="d-flex flex-wrap">
                                         <div class="me-2">
-                                            <h5 class="card-title mt-1 mb-0">All Teachers</h5>
+                                            <h5 class="card-title mt-1 mb-0">All Courses</h5>
                                         </div>
-                                        <!-- <ul class="nav nav-tabs nav-tabs-custom card-header-tabs ms-auto" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-bs-toggle="tab" href="#school-list" role="tab">
-                                                    School List
-                                                </a>
-                                            </li>
-                                        </ul> -->
                                     </div>
                                     
                                 </div>
@@ -622,9 +546,10 @@
                                                             
                                                             <div class="align-self-center overflow-hidden me-auto">
                                                                 <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Andre Aase</a></h5>
-                                                                    <span class="text-muted mb-0 badge badge-soft-success">Trafikklærer</span>
-                                                                    <span class="text-muted mb-0 badge badge-soft-success">Class B</span>
+                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course A</a></h5>
+                                                                    <span class="text-muted mb-0 badge badge-soft-success">TG</span>
+                                                                    <span class="text-muted mb-0 badge badge-soft-success">Active</span>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -637,7 +562,7 @@
                                                             </div>
                                                             <div class="align-self-center overflow-hidden me-auto">
                                                                 <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Ben Jarle Sagstad</a></h5>
+                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course B</a></h5>
                                                                     <span class="text-muted mb-0 badge badge-soft-primary">Trafikklærer</span>
                                                                 </div>
                                                             </div>
@@ -654,8 +579,8 @@
 
                                                             <div class="align-self-center overflow-hidden me-auto">
                                                                 <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Jessica Elisabeth Hansen</a></h5>
-                                                                    <span class="text-muted mb-0 badge badge-soft-primary">Trafikklærer</span>
+                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course C</a></h5>
+                                                                    <span class="text-muted mb-0 badge badge-soft-primary">Class - B</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -669,7 +594,7 @@
                                                                 
                                                             <div class="align-self-center overflow-hidden me-auto">
                                                                 <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Sonja Brandvik</a></h5>
+                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course D</a></h5>
                                                                     <span class="text-muted mb-0 badge badge-soft-info">Faglig leder</span>
                                                                 </div>
                                                             </div>
@@ -690,45 +615,38 @@
                                 <div class="card-body">
                                     <div class="d-flex border-bottom mb-4">
                                         <div class="me-2">
-                                            <h5 class="card-title mb-1">Teacher Details</h5>
+                                            <h5 class="card-title mb-1">Courses Details</h5>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
                                         <!-- item 01 -->
                                         <table id="s01" class="table align-middle table-nowrap mb-0 school-hidden">
                                             <tbody>
-                                                <tr class="text-center">
+                                                <tr>
+                                                    <td>Course Name</td>
+                                                    <td>Course A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class Name</td>
+                                                    <td>TG</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Course Status</td>
                                                     <td>
-                                                        <div class="mb-4 m-auto">
-                                                            <img class="rounded-circle avatar-md" src="assets/images/users/avatar-1.jpg" alt="">
-                                                        </div>
+                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Teacher Name</td>
-                                                    <td>Andre Aase</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Phone</td>
-                                                    <td>98654793</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Email</td>
-                                                    <td>dan-t@online.no</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Social Security Number</td>
+                                                    <td>Course ID</td>
                                                     <td>06B-4596</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
                                                         <a href="edit-teacher.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt
+                                                                font-size-16 align-middle me-2"></i> Edit Course
                                                             </button>
                                                         </a>
                                                             <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -773,38 +691,31 @@
                                         <!-- Item 02 -->
                                         <table id="s02" class="table align-middle table-nowrap mb-0 school-hidden">
                                             <tbody>
-                                                <tr class="text-center">
+                                                <tr>
+                                                    <td>Course Name</td>
+                                                    <td>Course B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class Name</td>
+                                                    <td>TG</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Course Status</td>
                                                     <td>
-                                                        <div class="mb-4 m-auto">
-                                                            <img class="rounded-circle avatar-md" src="assets/images/users/avatar-2.jpg" alt="">
-                                                        </div>
+                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Teacher Name</td>
-                                                    <td>Ben Jarle Sagstad</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Phone</td>
-                                                    <td>98654793</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Email</td>
-                                                    <td>dan-t@online.no</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Social Security Number</td>
+                                                    <td>Course ID</td>
                                                     <td>06B-4596</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
                                                         <a href="edit-teacher.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt
+                                                                font-size-16 align-middle me-2"></i> Edit Course
                                                             </button>
                                                         </a>
                                                             <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -849,38 +760,31 @@
                                          <!-- Item 03 -->
                                          <table id="s03" class="table align-middle table-nowrap mb-0 school-hidden">
                                             <tbody>
-                                                <tr class="text-center">
+                                                <tr>
+                                                    <td>Course Name</td>
+                                                    <td>Course C</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class Name</td>
+                                                    <td>TG</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Course Status</td>
                                                     <td>
-                                                        <div class="mb-4 m-auto">
-                                                            <img class="rounded-circle avatar-md" src="assets/images/users/avatar-3.jpg" alt="">
-                                                        </div>
+                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Teacher Name</td>
-                                                    <td>Jessica Elisabeth Hansen</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Phone</td>
-                                                    <td>98654793</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Email</td>
-                                                    <td>dan-t@online.no</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Social Security Number</td>
+                                                    <td>Course ID</td>
                                                     <td>06B-4596</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
                                                         <a href="edit-teacher.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt
+                                                                font-size-16 align-middle me-2"></i> Edit Course
                                                             </button>
                                                         </a>
                                                             <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -925,38 +829,31 @@
                                          <!-- Item 02 -->
                                          <table id="s04" class="table align-middle table-nowrap mb-0 school-hidden">
                                             <tbody>
-                                                <tr class="text-center">
+                                                <tr>
+                                                    <td>Course Name</td>
+                                                    <td>Course D</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class Name</td>
+                                                    <td>Trafikk TG</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Course Status</td>
                                                     <td>
-                                                        <div class="mb-4 m-auto">
-                                                            <img class="rounded-circle avatar-md" src="assets/images/users/avatar-4.jpg" alt="">
-                                                        </div>
+                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Teacher Name</td>
-                                                    <td>Sonja Brandvik</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Phone</td>
-                                                    <td>98654793</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teacher Email</td>
-                                                    <td>dan-t@online.no</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Social Security Number</td>
+                                                    <td>Course ID</td>
                                                     <td>06B-4596</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
                                                         <a href="edit-teacher.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt
+                                                                font-size-16 align-middle me-2"></i> Edit Course
                                                             </button>
                                                         </a>
                                                             <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
