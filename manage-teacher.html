@@ -358,11 +358,11 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="bx bx-user-plus"></i>
-                                <span key="t-maange-teacher">Teacher Manage</span>
+                                <span key="t-maange-teacher">Users Manage</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="manage-teacher.html" key="t-inbox">Manage Teacher</a></li>
-                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                                <li><a href="manage-teacher.html" key="t-users">Manage users</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-users">Add New Users</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,12 +386,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Mamnage Teacher</h4>
+                                <h4 class="mb-sm-0 font-size-18">Mamnage Users</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Manage Teacher</a></li>
-                                        <li class="breadcrumb-item active">Teacher</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Manage Users</a></li>
+                                        <li class="breadcrumb-item active">Users</li>
                                     </ol>
                                 </div>
 
@@ -443,7 +443,7 @@
                             </div>
                         </div>
 
-                        <!-- Add teacher -->
+                        <!-- Add users -->
                         <div class="col-lg-12 mb-3">
                             <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg">Add new teacher</button>
 
@@ -452,7 +452,7 @@
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="myLargeModalLabel">Add new teacher</h5>
+                                            <h5 class="modal-title" id="myLargeModalLabel">Add new users</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -705,7 +705,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Teacher Name</td>
+                                                    <td>User Name</td>
                                                     <td>Andre Aase</td>
                                                 </tr>
                                                 <tr>
@@ -723,18 +723,15 @@
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
-                                                        <a href="edit-teacher.html">
+                                                        <a href="edit-users.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt font-size-16 align-middle me-2"></i> Change
                                                             </button>
                                                         </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
+                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                                                <i class="bx bx bx-trash font-size-16 align-middle me-2"></i> Disable
                                                             </button>
-                                                           
+                                                                                                                 
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -799,18 +796,15 @@
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
-                                                        <a href="edit-teacher.html">
+                                                        <a href="edit-users.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt font-size-16 align-middle me-2"></i> Change
                                                             </button>
                                                         </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
+                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                                                <i class="bx bx bx-trash font-size-16 align-middle me-2"></i> Disable
                                                             </button>
-                                                           
+                                                                                                                 
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -875,18 +869,15 @@
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
-                                                        <a href="edit-teacher.html">
+                                                        <a href="edit-users.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt font-size-16 align-middle me-2"></i> Change
                                                             </button>
                                                         </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
+                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                                                <i class="bx bx bx-trash font-size-16 align-middle me-2"></i> Disable
                                                             </button>
-                                                           
+                                                                                                                 
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -951,18 +942,15 @@
                                                 <tr>
                                                     <td>
                                                         <div class="button-items">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                                <i class="bx bx-calendar-event font-size-16 align-middle me-2"></i> Calendar
-                                                            </button>
-                                                        <a href="edit-teacher.html">
+                                                        <a href="edit-users.html">
                                                             <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx bx-id-card font-size-16 align-middle me-2"></i> Custom Card
+                                                                <i class="bx bx-edit-alt font-size-16 align-middle me-2"></i> Change
                                                             </button>
                                                         </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
+                                                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                                                <i class="bx bx bx-trash font-size-16 align-middle me-2"></i> Disable
                                                             </button>
-                                                           
+                                                                                                                 
                                                         </div>
                                                     </td>
                                                 </tr>

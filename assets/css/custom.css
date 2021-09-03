@@ -86,3 +86,19 @@ div#assignClassShow {
     padding: 5px 10px;
     margin-bottom: 5px;
 }
+.avater-upload span i {
+    font-size: 135px;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+}
+.avater-upload {
+    text-align: center;
+}
+.avater-upload h4 {
+    margin: 20px 0;
+    padding: 10px;
+    background: #ddd;
+    display: inline-block;
+    cursor: pointer;
+}
