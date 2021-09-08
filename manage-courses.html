@@ -427,33 +427,47 @@
                                 <div class="card-body">
                                     <form action="">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-3">
                                                 <div class="form-group m-0">
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                                        </div>
+                                                    <div class="form-group">
+                                                        <select name="" id="" class="form-control select2-search-disable">
+                                                            <option value="-0">Select Class</option>
+                                                            <option value="1">Class A</option>
+                                                            <option value="1">Class B</option>
+                                                            <option value="1">Class C</option>
+                                                            <option value="1">Class D</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <select name="" id="" class="form-control select2-search-disable">
-                                                        <option value="-0">Select Class</option>
-                                                        <option value="1">Class A</option>
-                                                        <option value="1">Class B</option>
-                                                        <option value="1">Class C</option>
-                                                        <option value="1">Class D</option>
+                                                        <option value="-0">Show Active</option>
+                                                        <option value="active">Active</option>
+                                                        <option value="1">In-Active</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <select name="" id="" class="form-control select2-search-disable">
-                                                        <option value="-0">Select Status</option>
-                                                        <option value="1">Active</option>
-                                                        <option value="1">In-Active</option>
+                                                        <option value="-0">Product Type</option>
+                                                        <option value="1">Everyone</option>
+                                                        <option value="1">Teacher</option>
+                                                        <option value="1">Student</option>
+                                                        <option value="1">Admin</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control select2-search-disable">
+                                                        <option value="-0">Type</option>
+                                                        <option value="1">Everyone</option>
+                                                        <option value="1">Teacher</option>
+                                                        <option value="1">Student</option>
+                                                        <option value="1">Admin</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -465,152 +479,144 @@
 
                         <!-- Add Courses -->
                         <div class="col-lg-12 mb-3">
-                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">Add new Course</button>
+                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">Add Product</button>
+                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">Add Package</button>
 
                              <!-- Add Course Backdrop Modal -->
-                             <div class="modal fade bs-Course-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                             <div class="modal fade bs-Course-modal-lg" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="myLargeModalLabel">Add new Course</h5>
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title text-white" id="myLargeModalLabel">Add Product</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form>
                                                 <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="Cousename">Course Name
-                                                            </label>
-                                                            <input id="Cousename" name="Cousename" type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                   
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="Title">Select Class</label>
-                                                            <select class="form-control form-control select2" style="width: 370px; display: block;">
-                                                                <option>Select</option>
-                                                                <option value="A">Class A</option>
-                                                                <option value="B">Class B</option>
+
+                                                    <div class="col-lg-5">
+                                                        <div class="mb-3 product-class-left">
+                                                            <label for="Title"><strong>Show standards products from class</strong></label>
+                                                            <select class="form-control form-control select2" id="AddProductClass" style="width: 260px; display: block;">
+                                                                <option value="Class_A">Class A</option>
+                                                                <option value="Class_B">Class B</option>
                                                             </select>
-                                                            
+                                                            <p class="mt-3"><strong>Selected Standard producs:</strong><br>
+                                                            <i>No. Select products from the list on the right.</i>
+                                                            </p>
+
+                                                            <button type="button" class="btn btn-primary">Add Selected Products</button>
+                                                        </div>
+                                                        <div class="mb-3 product-class-left">
+                                                            <p>
+                                                                <strong>Custom product</strong>
+                                                                <br>
+                                                                if you want to add a product that isn not in the list on the right, you can create a custom product by clicking the button bellow
+                                                            </p>
+                                                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target=".bs-CustomProduct-modal-lg">New Custom Product</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="mb-3">
-                                                            <label for="Title">Status</label>
-                                                            <select class="form-control select2" style="width: 370px; display: block;">
-                                                                <option>Select</option>
-                                                                <option value="male">Active</option>
-                                                                <option value="EL">In-Active</option>
-                                                            </select>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-            
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save</button>
-                                                </div>
-                                            </form>
+
+                                <div class="col-lg-7">
+                                    <div class="mb-3">
+                                        
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
+                                            <li class="nav-item waves-effect waves-light">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#driving-time" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                                    <span class="d-none d-sm-block">Driving Time</span> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item waves-effect waves-light">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                                    <span class="d-none d-sm-block">Course</span> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item waves-effect waves-light">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                    <span class="d-none d-sm-block">Other</span>   
+                                                </a>
+                                            </li>
+                                            <li class="nav-item waves-effect waves-light">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                                    <span class="d-none d-sm-block">Service</span>    
+                                                </a>
+                                            </li>
+                                        </ul>
+        
+                                        <!-- Tab panes -->
+                                        <div class="tab-content p-3 text-muted">
+                                            <div class="tab-pane active" id="driving-time" role="tabpanel">
+                                                <ul class="mb-0 driving-time-tabdetails driving-product-data" id="Class_A">
+                                                   <li><input type="checkbox"> Free driving lessson (b)</li>
+                                                   <li><input type="checkbox"> Hiring Instructor (b)</li>
+                                                   <li><input type="checkbox"> Vehicle Rental (b)</li>
+                                                   <li><input type="checkbox"> Road Safety course (b)</li>
+                                                   <li><input type="checkbox"> Safety course on practice track (b)</li>
+                                                   <li><input type="checkbox"> Vervetime (b)</li>
+                                                </ul>
+                                                <ul class="mb-0 driving-time-tabdetails driving-product-data" id="Class_B">
+                                                    <li><input type="checkbox"> Free driving lessson (b)</li>
+                                                    <li><input type="checkbox"> Safety course on practice track (b)</li>
+                                                    <li><input type="checkbox"> Vervetime (b)</li>
+                                                 </ul>
+                                            </div>
+                                            <div class="tab-pane" id="profile-1" role="tabpanel">
+                                                <p class="mb-0">
+                                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+                                                    single-origin coffee squid. Exercitation +1 labore velit, blog
+                                                    sartorial PBR leggings next level wes anderson artisan four loko
+                                                    farm-to-table craft beer twee. Qui photo booth letterpress,
+                                                    commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+                                                    vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                                                    aesthetic magna 8-bit.
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane" id="messages-1" role="tabpanel">
+                                                <p class="mb-0">
+                                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they
+                                                    sold out mcsweeney's organic lomo retro fanny pack lo-fi
+                                                    farm-to-table readymade. Messenger bag gentrify pitchfork
+                                                    tattooed craft beer, iphone skateboard locavore carles etsy
+                                                    salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                                    Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+                                                    mi whatever gluten-free.
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane" id="settings-1" role="tabpanel">
+                                                <p class="mb-0">
+                                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                                                    art party before they sold out master cleanse gluten-free squid
+                                                    scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                                                    art party locavore wolf cliche high life echo park Austin. Cred
+                                                    vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                                                    farm-to-table.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div>
-                        </div>
-                        <!-- left content -->
-                        <div class="col-xl-4 col-lg-6">
-                            <div class="card">
-                                <div class="card-header bg-transparent border-bottom">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="me-2">
-                                            <h5 class="card-title mt-1 mb-0">All Courses</h5>
-                                        </div>
+
                                     </div>
-                                    
                                 </div>
                                 
-                                <div class="card-body">
-                                    <div data-simplebar style="max-height: 295px;">
-                                        <!-- Tab panes -->
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="school-list" role="tabpanel">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item py-3 school" data-details="s01">
-                                                        <div class="d-flex">
-                                                            <div class="me-3">
-                                                                <img src="assets/images/custom.png" alt="" class="avatar-sm h-auto d-block rounded">
-                                                            </div>
-                                                            
-                                                            <div class="align-self-center overflow-hidden me-auto">
-                                                                <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course A</a></h5>
-                                                                    <span class="text-muted mb-0 badge badge-soft-success">TG</span>
-                                                                    <span class="text-muted mb-0 badge badge-soft-success">Active</span>
-                                                                    
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="list-group-item py-3 school" data-details="s02">
-                                                        <div class="d-flex">
-                                                            <div class="me-3">
-                                                                <img src="assets/images/custom.png" alt="" class="avatar-sm h-auto d-block rounded">
-                                                            </div>
-                                                            <div class="align-self-center overflow-hidden me-auto">
-                                                                <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course B</a></h5>
-                                                                    <span class="text-muted mb-0 badge badge-soft-primary">Trafikklærer</span>
-                                                                </div>
-                                                            </div>
-    
-                                                            
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="list-group-item py-3 school" data-details="s03">
-                                                        <div class="d-flex">
-                                                            <div class="me-3">
-                                                                <img src="assets/images/custom.png" alt="" class="avatar-sm h-auto d-block rounded">
-                                                            </div>
-
-                                                            <div class="align-self-center overflow-hidden me-auto">
-                                                                <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course C</a></h5>
-                                                                    <span class="text-muted mb-0 badge badge-soft-primary">Class - B</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="list-group-item py-3 school" data-details="s04">
-                                                        <div class="d-flex">
-                                                            <div class="me-3">
-                                                                <img src="assets/images/custom.png" alt="" class="avatar-sm h-auto d-block rounded">
-                                                            </div>
-                                                                
-                                                            <div class="align-self-center overflow-hidden me-auto">
-                                                                <div>
-                                                                    <h5 class="font-size-14 text-truncate"><a href="javascript:void(0)" class="text-dark">Course D</a></h5>
-                                                                    <span class="text-muted mb-0 badge badge-soft-info">Faglig leder</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- end tab pane -->
-                                        </div>
-                                        <!-- end tab content -->
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+    </div>
+    
                         <!-- right content -->
-                        <div class="col-xl-8">
+                        <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex border-bottom mb-4">
@@ -618,289 +624,702 @@
                                             <h5 class="card-title mb-1">Courses Details</h5>
                                         </div>
                                     </div>
-                                    <div class="table-responsive">
-                                        <!-- item 01 -->
-                                        <table id="s01" class="table align-middle table-nowrap mb-0 school-hidden">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Course Name</td>
-                                                    <td>Course A</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Class Name</td>
-                                                    <td>TG</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course Status</td>
-                                                    <td>
-                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course ID</td>
-                                                    <td>06B-4596</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="button-items">
-                                                        <a href="edit-teacher.html">
-                                                            <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx-edit-alt
-                                                                font-size-16 align-middle me-2"></i> Edit Course
-                                                            </button>
-                                                        </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
-                                                            </button>
-                                                           
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                             <!-- Static Backdrop Modal -->
-                                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Assigned classes</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <h6>Assign new class</h6>
-                                                            <form action="">
-                                                                <select name="" id="AssignClassID" class="form-control select2-search-disable">
-                                                                    <option value="a">Klass A</option>
-                                                                    <option value="b">Klass B</option>
-                                                                    <option value="c">Klass C</option>
-                                                                    <option value="d">Klass D</option>
-
-                                                                </select>
-                                                                <br>
-                                                                <input type="button" class="btn btn-primary" value="Assign Now" id="assignClass">
-                                                            </form>
-                                                            <div id="assignClassShow"></div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </table>
-                                        <!-- Item 02 -->
-                                        <table id="s02" class="table align-middle table-nowrap mb-0 school-hidden">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Course Name</td>
-                                                    <td>Course B</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Class Name</td>
-                                                    <td>TG</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course Status</td>
-                                                    <td>
-                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course ID</td>
-                                                    <td>06B-4596</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="button-items">
-                                                        <a href="edit-teacher.html">
-                                                            <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx-edit-alt
-                                                                font-size-16 align-middle me-2"></i> Edit Course
-                                                            </button>
-                                                        </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
-                                                            </button>
-                                                           
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                             <!-- Static Backdrop Modal -->
-                                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Assigned classes</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <h6>Assign new class</h6>
-                                                            <form action="">
-                                                                <select name="" id="AssignClassID" class="form-control select2-search-disable">
-                                                                    <option value="a">Klass A</option>
-                                                                    <option value="b">Klass B</option>
-                                                                    <option value="c">Klass C</option>
-                                                                    <option value="d">Klass D</option>
-
-                                                                </select>
-                                                                <br>
-                                                                <input type="button" class="btn btn-primary" value="Assign Now" id="assignClass">
-                                                            </form>
-                                                            <div id="assignClassShow"></div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </table>
-                                         <!-- Item 03 -->
-                                         <table id="s03" class="table align-middle table-nowrap mb-0 school-hidden">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Course Name</td>
-                                                    <td>Course C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Class Name</td>
-                                                    <td>TG</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course Status</td>
-                                                    <td>
-                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course ID</td>
-                                                    <td>06B-4596</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="button-items">
-                                                        <a href="edit-teacher.html">
-                                                            <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx-edit-alt
-                                                                font-size-16 align-middle me-2"></i> Edit Course
-                                                            </button>
-                                                        </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
-                                                            </button>
-                                                           
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                             <!-- Static Backdrop Modal -->
-                                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Assigned classes</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <h6>Assign new class</h6>
-                                                            <form action="">
-                                                                <select name="" id="AssignClassID" class="form-control select2-search-disable">
-                                                                    <option value="a">Klass A</option>
-                                                                    <option value="b">Klass B</option>
-                                                                    <option value="c">Klass C</option>
-                                                                    <option value="d">Klass D</option>
-
-                                                                </select>
-                                                                <br>
-                                                                <input type="button" class="btn btn-primary" value="Assign Now" id="assignClass">
-                                                            </form>
-                                                            <div id="assignClassShow"></div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </table>
-                                         <!-- Item 02 -->
-                                         <table id="s04" class="table align-middle table-nowrap mb-0 school-hidden">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Course Name</td>
-                                                    <td>Course D</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Class Name</td>
-                                                    <td>Trafikk TG</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course Status</td>
-                                                    <td>
-                                                        <span class="text-muted mb-0 badge badge-soft-success">Active</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Course ID</td>
-                                                    <td>06B-4596</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="button-items">
-                                                        <a href="edit-teacher.html">
-                                                            <button type="button" class="btn btn-outline-primary waves-effect waves-light">
-                                                                <i class="bx bx-edit-alt
-                                                                font-size-16 align-middle me-2"></i> Edit Course
-                                                            </button>
-                                                        </a>
-                                                            <button type="button" class="btn btn-light waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                <i class="bx bx-add-to-queue font-size-16 align-middle me-2"></i> Assign Class
-                                                            </button>
-                                                           
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                             <!-- Static Backdrop Modal -->
-                                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Assigned classes</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <h6>Assign new class</h6>
-                                                            <form action="">
-                                                                <select name="" id="AssignClassID" class="form-control select2-search-disable">
-                                                                    <option value="a">Klass A</option>
-                                                                    <option value="b">Klass B</option>
-                                                                    <option value="c">Klass C</option>
-                                                                    <option value="d">Klass D</option>
-
-                                                                </select>
-                                                                <br>
-                                                                <input type="button" class="btn btn-primary" value="Assign Now" id="assignClass">
-                                                            </form>
-                                                            <div id="assignClassShow"></div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </table>
-                                          
-                                    </div>
+                                    <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                                        <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Type</th>
+                                            <th>ID</th>
+                                            <th>Active</th>
+                                            <th>Standard</th>
+                                            <th>Price</th>
+                                            <th>Booking Web</th>
+                                            <th>Sorting</th>
+                                            <th>Price list Web</th>
+                                            <th>Prod.rapport</th>
+                                        </tr>
+                                        </thead>
+    
+    
+                                        <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>12</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Javascript Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        <tr>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colleen Hurst</td>
+                                            <td>Javascript Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sonya Frost</td>
+                                            <td>Software Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jena Gaines</td>
+                                            <td>Office Manager</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Charde Marshall</td>
+                                            <td>Regional Director</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gloria Little</td>
+                                            <td>Systems Administrator</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bradley Greer</td>
+                                            <td>Software Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dai Rios</td>
+                                            <td>Personnel Lead</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Angelica Ramos</td>
+                                            <td>Chief Executive Officer (CEO)</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gavin Joyce</td>
+                                            <td>Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jennifer Chang</td>
+                                            <td>Regional Director</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brenden Wagner</td>
+                                            <td>Software Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fiona Green</td>
+                                            <td>Chief Operating Officer (COO)</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shou Itou</td>
+                                            <td>Regional Marketing</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michelle House</td>
+                                            <td>Integration Specialist</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Suki Burks</td>
+                                            <td>Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prescott Bartlett</td>
+                                            <td>Technical Author</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gavin Cortez</td>
+                                            <td>Team Leader</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Martena Mccray</td>
+                                            <td>Post-Sales support</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unity Butler</td>
+                                            <td>Marketing Designer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Howard Hatfield</td>
+                                            <td>Office Manager</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hope Fuentes</td>
+                                            <td>Secretary</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vivian Harrell</td>
+                                            <td>Financial Controller</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Finn Camacho</td>
+                                            <td>Support Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jennifer Acosta</td>
+                                            <td>Junior Javascript Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cara Stevens</td>
+                                            <td>Sales Assistant</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hermione Butler</td>
+                                            <td>Regional Director</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>11</td>
+                                            <td>Active</td>
+                                            <td>Standard</td>
+                                            <td>$320,800</td>
+                                            <td>No</td>
+                                            <td>-</td>
+                                            <td>YES</td>
+                                            <td>YES</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <!-- end card -->
                         </div>
+                        
                     </div><!-- End row -->
 
                 </div> <!-- container-fluid -->
@@ -908,27 +1327,74 @@
             <!-- End Page-content -->
 
             <!-- Modal -->
-            <div class="modal fade" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+            <div class="modal fade bs-CustomProduct-modal-lg" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="composemodalTitle">New Message</h5>
+                            <h5 class="modal-title" id="composemodalTitle">New Product</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="To">
-                                </div>
-
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Subject">
-                                </div>
-                                <div class="mb-3">
-                                    <form method="post">
-                                        <textarea id="email-editor" name="area"></textarea>
-                                    </form>
-                                </div>
+                            <div class="row">
+                                <form action="">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Select Class">Please select class</label>
+                                                <select name="" id="" class="form-control select2-search" style="width: 100%;">
+                                                    <option value="-0">Select Class</option>
+                                                    <option value="1">Class A</option>
+                                                    <option value="1">Class B</option>
+                                                    <option value="1">Class C</option>
+                                                    <option value="1">Class D</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Select Class">Please select type</label>
+                                                <select name="" id="" class="form-control select2-search" style="width: 100%;">
+                                                    <option value="-0">Select Class</option>
+                                                    <option value="1">Driving Time</option>
+                                                    <option value="1">Driving Time two</option>
+                                                    <option value="1">Driviing Time Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Full name">Type your name</label>
+                                                <input type="text" class="form-control" placeholder="type your name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <div class="form-group">
+                                                    <label for="Price">Price</label>
+                                                    <input type="text" class="form-control" placeholder="Price">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <div class="form-group">
+                                                    <label for="Price">Vat%</label>
+                                                    <input type="text" class="form-control" placeholder="%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Duration">Duration</label>
+                                                <input type="text" class="form-control" placeholder="Duration in minutes">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
 
                             </div>
                         </div>

@@ -19,4 +19,13 @@ $(document).ready(function () {
         var ClassASsignValue = $('#AssignClassID :selected').text();
         document.getElementById("assignClassShow").innerHTML = ClassASsignValue;
     });
+
+    // Depend on dropdown
+    
+    $(function() {
+        $('#AddProductClass').change(function(){
+          $('.driving-product-data').hide();
+          $('#' + $(this).val()).show();
+        });
+      });
 });    
