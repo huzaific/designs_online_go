@@ -133,3 +133,15 @@ ul.driving-time-tabdetails li input {
     padding: 20px;
     border: 2px solid #ddd;
 }
+.product-class-right {
+    background: #eee;
+    padding: 10px;
+    border: 2px solid #ddd;
+}
+#booking_table_inner{
+    border: none;
+}
+#booking_table_inner td, #booking_table_inner th {
+    border: none !important;
+    padding: 3px;
+}

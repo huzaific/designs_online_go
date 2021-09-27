@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8" />
+    <title>Manage Courses | OnlineGo - Online Traffikskole</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/@chenfengyuan/datepicker/datepicker.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/gologo.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/gologo.svg" alt="" height="17">
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/gologo.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/OnlineGo-Light.svg" alt="" height="19">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-search-dropdown">
+    
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
+                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
+                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
+                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
+                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-customize"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                            <div class="px-lg-2">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/github.png" alt="Github">
+                                            <span>GitHub</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                            <span>Bitbucket</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                            <span>Dribbble</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                            <span>Dropbox</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                            <span>Mail Chimp</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/slack.png" alt="slack">
+                                            <span>Slack</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                            <i class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-bell bx-tada"></i>
+                            <span class="badge bg-danger rounded-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bx-cart"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <img src="assets/images/users/avatar-3.jpg"
+                                            class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <img src="assets/images/users/avatar-4.jpg"
+                                            class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
+                            <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                            <i class="bx bx-cog bx-spin"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title" key="t-menu">Menu</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i>
+                                <span key="t-dashboards">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">Apps</li>
+
+                        <li>
+                            <a href="chat.html" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span key="t-chat">Chat</span>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-email">Send  Email/SMS</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="email-inbox.html" key="t-inbox">Inbox</a></li>
+                                <li><a href="email-read.html" key="t-read-email">Read Email</a></li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge rounded-pill badge-soft-success float-end" key="t-new">New</span>
+                                        <span key="t-email-templates">Templates</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="email-template-basic.html" key="t-basic-action">Basic Action</a></li>
+                                        <li><a href="email-template-alert.html" key="t-alert-email">Alert Email</a></li>
+                                        <li><a href="email-template-billing.html" key="t-bill-email">Billing Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-maange-school">School Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-school.html" key="t-inbox">Manage School</a></li>
+                                <li><a href="add-school.html" key="t-read-email">Add New School</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-certification"></i>
+                                <span key="t-maange-courses">Courses Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-courses.html" key="t-maange-courses">Manage Courses</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-maange-courses">Add New Course</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-user-plus"></i>
+                                <span key="t-maange-teacher">Teacher Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-teacher.html" key="t-inbox">Manage Teacher</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-user-pin"></i>
+                                <span key="t-maange-student">Student Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-student.html" key="t-inbox">Manage Student</a></li>
+                                <li><a href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="courseovervoew.html">
+                                <i class="bx bx-user-pin"></i>
+                                <span key="t-course-overview">Course Overview</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bookingcourse.html">
+                                <i class="bx bx-grid-alt"></i>
+                                <span key="t-course-overview">Booking Course</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Courses Overview</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Manage Overview</a></li>
+                                        <li class="breadcrumb-item active">Courses Overview</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <!-- Top card -->
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                                        <option value="-0">Select Class</option>
+                                                        <option value="1">Class A</option>
+                                                        <option value="1">Class B</option>
+                                                        <option value="1">Class C</option>
+                                                        <option value="1">Class D</option>
+                                                    </select>
+                                                    <label for="floatingSelectGrid">Please Select Class</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-group">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="date" class="form-control" id="floatingnameInput" placeholder="Enter Date">
+                                                        <label for="floatingnameInput">From</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-group">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="date" class="form-control" id="floatingnameInput" placeholder="Enter Date">
+                                                        <label for="floatingnameInput">To</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-group">
+                                                    <div class="square-switch">
+                                                        <input type="checkbox" id="square-switch1" switch="none" checked />
+                                                        <label for="square-switch1" data-on-label="On"
+                                                            data-off-label="Off"></label>
+                                                    </div>
+                                                    Compact
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Courses -->
+                        <div class="col-lg-12 mb-3">
+                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">Download</button>
+                            <button type="button" class="btn btn-primary waves-effect" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">Print</button>
+
+                        </form>
+
+        </div>
+    </div>
+    
+                        <!-- right content -->
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-4">
+                                        <div class="me-2">
+                                            <!-- <h5 class="card-title mb-1">Courses Details</h5> -->
+                                        </div>
+                                    </div>
+                                    <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                                        <thead>
+                                        <tr>
+                                            <th>Kl.</th>
+                                            <th>Head Teacher</th>
+                                            <th>Comment</th>
+                                            <th>Meeting Place</th>
+                                            <th>Participant</th>
+                                            <th>Start</th>
+                                            <th>End</th>
+                                            <th>Choice</th>
+                                        </tr>
+                                        </thead>
+    
+    
+                                        <tbody>
+                                        <tr class="group bg-light">
+                                            <td colspan="8">First Aid</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>System Architect</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#" data-bs-toggle="modal" data-bs-target=".bs-Course-modal-lg">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Accountant</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Junior Technical Author</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Javascript Developer</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Accountant</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr class="group bg-light">
+                                            <td colspan="8">Safety course on practice work</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Integration Specialist</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Sales Assistant</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Integration Specialist</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Javascript Developer</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Software Engineer</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Office Manager</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Support Lead</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Regional Director</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Regional Director</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Marketing Designer</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr class="group bg-light">
+                                            <td colspan="8">First Aid</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Systems Administrator</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Software Engineer</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Personnel Lead</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Development Lead</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TG, Bm BAut</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td> </td>
+                                            <td>Drive the hall</td>
+                                            <td>16 / 16</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td><a href="#">open the course</a></td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        
+                    </div><!-- End row -->
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+             <!-- Add Course Backdrop Modal -->
+             <div class="modal fade bs-Course-modal-lg" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h5 class="modal-title text-white" id="myLargeModalLabel">First aid (TG, B, BAut)</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-lg-5">
+                                        <div class="mb-3 product-class-left">
+                                            <label for="Title"><strong>Show standards products from class</strong></label>
+                                            <select class="form-control form-control select2" id="AddProductClass" style="width: 260px; display: block;">
+                                                <option value="Class_A">Class A</option>
+                                                <option value="Class_B">Class B</option>
+                                            </select>
+                                            <p class="mt-3"><strong>Selected Standard producs:</strong><br>
+                                            <i>No. Select products from the list on the right.</i>
+                                            </p>
+
+                                            <button type="button" class="btn btn-primary">Add Selected Products</button>
+                                        </div>
+                                        <div class="mb-3 product-class-left">
+                                            <p>
+                                                <strong>Custom product</strong>
+                                                <br>
+                                                if you want to add a product that isn not in the list on the right, you can create a custom product by clicking the button bellow
+                                            </p>
+                                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target=".bs-CustomProduct-modal-lg">New Custom Product</button>
+                                        </div>
+                                    </div>
+
+                <div class="col-lg-7">
+                    <div class="mb-3">
+                        
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#driving-time" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Driving Time</span> 
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Course</span> 
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Other</span>   
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                    <span class="d-none d-sm-block">Service</span>    
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content p-3 text-muted">
+                            <div class="tab-pane active" id="driving-time" role="tabpanel">
+                                <ul class="mb-0 driving-time-tabdetails driving-product-data" id="Class_A">
+                                   <li><input type="checkbox"> Free driving lessson (b)</li>
+                                   <li><input type="checkbox"> Hiring Instructor (b)</li>
+                                   <li><input type="checkbox"> Vehicle Rental (b)</li>
+                                   <li><input type="checkbox"> Road Safety course (b)</li>
+                                   <li><input type="checkbox"> Safety course on practice track (b)</li>
+                                   <li><input type="checkbox"> Vervetime (b)</li>
+                                </ul>
+                                <ul class="mb-0 driving-time-tabdetails driving-product-data" id="Class_B">
+                                    <li><input type="checkbox"> Free driving lessson (b)</li>
+                                    <li><input type="checkbox"> Safety course on practice track (b)</li>
+                                    <li><input type="checkbox"> Vervetime (b)</li>
+                                 </ul>
+                            </div>
+                            <div class="tab-pane" id="profile-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+                                    single-origin coffee squid. Exercitation +1 labore velit, blog
+                                    sartorial PBR leggings next level wes anderson artisan four loko
+                                    farm-to-table craft beer twee. Qui photo booth letterpress,
+                                    commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+                                    vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                                    aesthetic magna 8-bit.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="messages-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they
+                                    sold out mcsweeney's organic lomo retro fanny pack lo-fi
+                                    farm-to-table readymade. Messenger bag gentrify pitchfork
+                                    tattooed craft beer, iphone skateboard locavore carles etsy
+                                    salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                    Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+                                    mi whatever gluten-free.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="settings-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                                    art party before they sold out master cleanse gluten-free squid
+                                    scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                                    art party locavore wolf cliche high life echo park Austin. Cred
+                                    vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                                    farm-to-table.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div>
+
+
+
+            <!-- Modal -->
+            <div class="modal fade bs-CustomProduct-modal-lg" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="composemodalTitle">New Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form action="">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Select Class">Please select class</label>
+                                                <select name="" id="" class="form-control select2-search" style="width: 100%;">
+                                                    <option value="-0">Select Class</option>
+                                                    <option value="1">Class A</option>
+                                                    <option value="1">Class B</option>
+                                                    <option value="1">Class C</option>
+                                                    <option value="1">Class D</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Select Class">Please select type</label>
+                                                <select name="" id="" class="form-control select2-search" style="width: 100%;">
+                                                    <option value="-0">Select Class</option>
+                                                    <option value="1">Driving Time</option>
+                                                    <option value="1">Driving Time two</option>
+                                                    <option value="1">Driviing Time Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Full name">Type your name</label>
+                                                <input type="text" class="form-control" placeholder="type your name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <div class="form-group">
+                                                    <label for="Price">Price</label>
+                                                    <input type="text" class="form-control" placeholder="Price">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <div class="form-group">
+                                                    <label for="Price">Vat%</label>
+                                                    <input type="text" class="form-control" placeholder="%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Duration">Duration</label>
+                                                <input type="text" class="form-control" placeholder="Duration in minutes">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send <i class="fab fa-telegram-plane ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+            
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © OnlineGo.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Combrokers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div data-simplebar class="h-100">
+            <div class="rightbar-title d-flex align-items-center px-3 py-4">
+        
+                <h5 class="m-0 me-2">Settings</h5>
+
+                <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                    <i class="mdi mdi-close noti-icon"></i>
+                </a>
+            </div>
+
+            <!-- Settings -->
+            <hr class="mt-0" />
+            <h6 class="text-center mb-0">Choose Layouts</h6>
+
+            <div class="p-4">
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
+                    <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css">
+                    <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="form-check form-switch mb-5">
+                    <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css">
+                    <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+        
+            </div>
+
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <script src="assets/libs/select2/js/select2.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- form advanced init -->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+</html>
