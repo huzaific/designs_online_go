@@ -439,19 +439,19 @@
                                     <!-- Nav tabs -->
                         <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#driving-time" role="tab">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#icomingbooking" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
                                     <span class="d-none d-sm-block">Incoming</span> 
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                <a class="nav-link" data-bs-toggle="tab" href="#Approvebooking" role="tab">
                                     <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
                                     <span class="d-none d-sm-block">Approve</span> 
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                <a class="nav-link" data-bs-toggle="tab" href="#Cancelled" role="tab">
                                     <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
                                     <span class="d-none d-sm-block">Cancelled</span>   
                                 </a>
@@ -460,7 +460,7 @@
 
                         <!-- Tab panes -->
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="driving-time" role="tabpanel">
+                            <div class="tab-pane active" id="icomingbooking" role="tabpanel">
                                 <!-- Main tabke -->
                                 <table id="datatable" class="table dt-responsive  nowrap w-100 align-middle">
                                     <thead class=" bg-light">
@@ -848,18 +848,256 @@
                                 </table>
                                 
                             </div>
-                            <div class="tab-pane" id="profile-1" role="tabpanel">
-                                <p class="mb-0">
-                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                    single-origin coffee squid. Exercitation +1 labore velit, blog
-                                    sartorial PBR leggings next level wes anderson artisan four loko
-                                    farm-to-table craft beer twee. Qui photo booth letterpress,
-                                    commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                    vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                    aesthetic magna 8-bit.
-                                </p>
+                            <div class="tab-pane" id="Approvebooking" role="tabpanel">
+                                <!-- Main table -->
+                                <table id="datatable" class="table dt-responsive  nowrap w-100 align-middle">
+                                    <thead class=" bg-light">
+                                    <tr>
+                                        <th>Creatd</th>
+                                        <th>Desired time</th>
+                                        <th>Product</th>
+                                        <th>Request</th>
+                                        <th>Customer</th>
+                                        <th>Teacher</th>
+                                        <th>Choice</th>
+                                    </tr>
+                                    </thead>
+
+
+                                    <tbody>
+
+                                    <tr >
+                                        <td colspan="8" class="p-0">
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="card border shadow-none card-body text-muted mb-0">
+                                               <!-- Booking content -->
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <table class="table align-middle table-borderless mb-0 " id="booking_table_inner">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Product</th>
+                                                                        <td>Driving Time (BAut)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Desired time</th>
+                                                                        <td>22.09.2021 kl. 13:30 - 15.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Teacher</th>
+                                                                        <td>Andre Asse</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Prices</th>
+                                                                        <td>675.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="text-danger">- Discount</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Quantity</th>
+                                                                        <td>2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Total</th>
+                                                                        <td>1,350.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Discount x 2</th>
+                                                                       
+                                                                        <td>
+                                                                            <div class="row no-gutters">
+                                                                                <div class="col-lg-3 px-0">
+                                                                                    <input type="text" value="0" class="form-control">
+                                                                                </div>
+                                                                                <div class="col-lg-3 px-0">
+                                                                                <select id="formrow-inputState" class="form-select">
+                                                                                    <option selected="">Kr</option>
+                                                                                    <option>...</option>
+                                                                                </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <table class="table table-borderless mb-0 align-middle" id="booking_table_inner">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Request from</th>
+                                                                        <td>Md Arif</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Date of birth</th>
+                                                                        <td>0425695222</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Address</th>
+                                                                        <td>Kopervik, Norway</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Mobile</th>
+                                                                        <td>9211410</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Email</th>
+                                                                        <td>arif@combrokers.no</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Age</th>
+                                                                        <td>18 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>For good as of</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Total Reservation</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                                        <td>22.02.2021<br> 19:22:07</td>
+                                        <td>09/22/2021<br> 11:30 - 13</td>
+                                        <td>Driving time (BAut)</td>
+                                        <td>OnlinegoElevs</td>
+                                        <td>The Uglum</td>
+                                        <td>Andre Asse</td>
+                                        <td>
+                                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                                                Show
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr >
+                                        <td colspan="8" class="p-0">
+                                            <div class="collapse" id="collapseExample2">
+                                                <div class="card border shadow-none card-body text-muted mb-0">
+                                                    <!-- Booking content -->
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <table class="table table-borderless mb-0 align-middle" id="booking_table_inner">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Request from</th>
+                                                                        <td>Md Arif</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Date of birth</th>
+                                                                        <td>0425695222</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Address</th>
+                                                                        <td>Kopervik, Norway</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Mobile</th>
+                                                                        <td>9211410</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Email</th>
+                                                                        <td>arif@combrokers.no</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Age</th>
+                                                                        <td>18 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>For good as of</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Total Reservation</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                                        <td>22.02.2021<br> 19:22:07</td>
+                                        <td>09/22/2021<br> 11:30 - 13</td>
+                                        <td>Driving time (BAut)</td>
+                                        <td>OnlinegoElevs</td>
+                                        <td>The Uglum</td>
+                                        <td>Andre Asse</td>
+                                        <td>
+                                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                                                Show
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="8" class="p-0">
+                                            <div class="collapse" id="collapseExample3">
+                                                <div class="card border shadow-none card-body text-muted mb-0">
+                                                    <!-- Booking content -->
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <table class="table table-borderless mb-0 align-middle" id="booking_table_inner">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Request from</th>
+                                                                        <td>Md Arif</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Date of birth</th>
+                                                                        <td>0425695222</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Address</th>
+                                                                        <td>Kopervik, Norway</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Mobile</th>
+                                                                        <td>9211410</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Email</th>
+                                                                        <td>arif@combrokers.no</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Age</th>
+                                                                        <td>18 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>For good as of</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Total Reservation</th>
+                                                                        <td>0.00</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="tab-pane" id="messages-1" role="tabpanel">
+                            <div class="tab-pane" id="Cancelled" role="tabpanel">
                                 <p class="mb-0">
                                     Etsy mixtape wayfarers, ethical wes anderson tofu before they
                                     sold out mcsweeney's organic lomo retro fanny pack lo-fi
