@@ -40,3 +40,20 @@ $(document).ready(function () {
  
 
 });    
+
+
+$(document).ready(function() {
+
+    $('#add_row').click(function(e) {
+      //Add row
+      row = '';
+      row += '<tr><td><input type="text" class="form-control"></td><td ><input type="date" class="form-control"></td><td><input type="date" class="form-control"></td><td><input type="number" class="form-control"></td>';
+      row += '<td><button class="btn btn-outline-danger delete_row">remove</button></td></tr>';
+      $("tbody").append(row);
+    })
+  
+    $("#add_table").on('click', '.delete_row', function() {
+      $(this).closest('tr').remove();
+    });
+  
+  });

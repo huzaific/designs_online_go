@@ -777,118 +777,222 @@
                             <h5 class="modal-title text-white" id="myLargeModalLabel">First aid (TG, B, BAut)</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="row">
-
-                                    <div class="col-lg-5">
-                                        <div class="mb-3 product-class-left">
-                                            <label for="Title"><strong>Show standards products from class</strong></label>
-                                            <select class="form-control form-control select2" id="AddProductClass" style="width: 260px; display: block;">
-                                                <option value="Class_A">Class A</option>
-                                                <option value="Class_B">Class B</option>
-                                            </select>
-                                            <p class="mt-3"><strong>Selected Standard producs:</strong><br>
-                                            <i>No. Select products from the list on the right.</i>
-                                            </p>
-
-                                            <button type="button" class="btn btn-primary">Add Selected Products</button>
-                                        </div>
-                                        <div class="mb-3 product-class-left">
-                                            <p>
-                                                <strong>Custom product</strong>
-                                                <br>
-                                                if you want to add a product that isn not in the list on the right, you can create a custom product by clicking the button bellow
-                                            </p>
-                                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target=".bs-CustomProduct-modal-lg">New Custom Product</button>
-                                        </div>
-                                    </div>
-
-                <div class="col-lg-7">
-                    <div class="mb-3">
-                        
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#driving-time" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                    <span class="d-none d-sm-block">Driving Time</span> 
-                                </a>
-                            </li>
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
-                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                    <span class="d-none d-sm-block">Course</span> 
-                                </a>
-                            </li>
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
-                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                    <span class="d-none d-sm-block">Other</span>   
-                                </a>
-                            </li>
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                    <span class="d-none d-sm-block">Service</span>    
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content p-3 text-muted">
-                            <div class="tab-pane active" id="driving-time" role="tabpanel">
-                                <ul class="mb-0 driving-time-tabdetails driving-product-data" id="Class_A">
-                                   <li><input type="checkbox"> Free driving lessson (b)</li>
-                                   <li><input type="checkbox"> Hiring Instructor (b)</li>
-                                   <li><input type="checkbox"> Vehicle Rental (b)</li>
-                                   <li><input type="checkbox"> Road Safety course (b)</li>
-                                   <li><input type="checkbox"> Safety course on practice track (b)</li>
-                                   <li><input type="checkbox"> Vervetime (b)</li>
+                        <div class="row mb-3 p-0">
+                            <div class="col-lg-12">          
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#Booking" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                            <span class="d-none d-sm-block">Booking (0)</span> 
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                            <span class="d-none d-sm-block">Generally</span> 
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                            <span class="d-none d-sm-block">Participants (2)</span>   
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Settings</span>    
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Training</span>    
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Messages</span>    
+                                        </a>
+                                    </li>
                                 </ul>
-                                <ul class="mb-0 driving-time-tabdetails driving-product-data" id="Class_B">
-                                    <li><input type="checkbox"> Free driving lessson (b)</li>
-                                    <li><input type="checkbox"> Safety course on practice track (b)</li>
-                                    <li><input type="checkbox"> Vervetime (b)</li>
-                                 </ul>
-                            </div>
-                            <div class="tab-pane" id="profile-1" role="tabpanel">
-                                <p class="mb-0">
-                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                    single-origin coffee squid. Exercitation +1 labore velit, blog
-                                    sartorial PBR leggings next level wes anderson artisan four loko
-                                    farm-to-table craft beer twee. Qui photo booth letterpress,
-                                    commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                    vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                    aesthetic magna 8-bit.
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="messages-1" role="tabpanel">
-                                <p class="mb-0">
-                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they
-                                    sold out mcsweeney's organic lomo retro fanny pack lo-fi
-                                    farm-to-table readymade. Messenger bag gentrify pitchfork
-                                    tattooed craft beer, iphone skateboard locavore carles etsy
-                                    salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
-                                    Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
-                                    mi whatever gluten-free.
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="settings-1" role="tabpanel">
-                                <p class="mb-0">
-                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                                    art party before they sold out master cleanse gluten-free squid
-                                    scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                                    art party locavore wolf cliche high life echo park Austin. Cred
-                                    vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                                    farm-to-table.
-                                </p>
                             </div>
                         </div>
-
+    <div class="modal-body">
+        <form>
+            <!-- Tab panes -->
+            <div class="tab-content p-3 text-muted">
+                <div class="tab-pane active" id="Booking" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="mb-3 product-class-left">
+                                <div class="form-group mb-3">
+                                    <label for="Add course Participant">Add course Participant</label>
+                                    <input type="text" class="form-control" value="Add course Participant">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <select class="form-control form-control select2" id="AddProductClass" style="width: 260px; display: block;">
+                                        <option value="Class_A">Class A</option>
+                                        <option value="Class_B">Class B</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Add when searching by name, date of birth">
+                                </div>
+        
+                            </div>
+                            <div class="mb-3 product-class-left">
+                                <div class="partcipant_list">
+                                    <ul>
+                                        <li><strong>Course Participants</strong></li>
+                                        <li>Lejla Mujanovic (BAut) <span class="text-danger">4,490.00</span></li>
+                                        <li>Emil Ormaan vallenes (BAut) <span class="text-danger">4,590.00</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-3 bg-info text-white p-3">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab nam nemo optio aspernatur placeat incidunt, exercitationem.</p>
+                            </div>
+                            <div class="mb-3 product-class-left">
+                                <h4 class="card-title mb-3">Multikurs</h4>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="container" type="checkbox" name="container">
+                                    <label class="form-check-label" for="container">
+                                        Class B
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="containerA" type="checkbox" name="containerA" checked>
+                                    <label class="form-check-label" for="containerA">
+                                        Class BAut
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-7">
+                            <div class="mb-3 product-class-right">
+                                <table class="table align-middle table-nowrap mb-0">
+                                    <thead>
+                                        <th><span> <i class="bx bx-edit"></i> </span></th>
+                                        <th>Course day</th>
+                                        <th>Starting at.</th>
+                                        <th>Until</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>21.09.2021</td>
+                                            <td>08:45</td>
+                                            <td>15:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mb-3 product-class-right">
+                                <label for=""><strong>Meeting places (Incl. in SMS)</strong></label>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <select name="" id="" class="form-control">
+                                            <option value="#">Select class</option>
+                                            <option value="#">Class A</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" placeholder="Type your own text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 bg-info p-3 text-white">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut iusto pariatur aspernatur ad, cupiditate voluptatem aliquam ut obcaecati debitis, deserunt dolor rerum eum illo veritatis? Sit nostrum iusto alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut iusto pariatur aspernatur ad, cupiditate voluptatem aliquam ut obcaecati debitis, deserunt dolor rerum eum illo veritatis? Sit nostrum iusto alias!</p>
+                            </div>
+                            <div class="mb-3 product-class-right">
+                                <h6><strong>Booking Details </strong></h6>
+                                <table>
+                                    <tr>
+                                        <th>Bane</th>
+                                        <td>Tysver</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>Two students par car</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Reservation time</th>
+                                        <td>29.12.2021</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bookingref</th>
+                                        <td>4173333</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tel</th>
+                                        <td>4055521</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="mb-3 bg-info p-3 text-white">
+                                <p>cupiditate voluptatem aliquam ut obcaecati debitis, deserunt dolor rerum eum illo veritatis? Sit nostrum iusto alias!!</p>
+                            </div>
+                            <div class="mb-3 product-class-right">
+                                <h6><strong>Course Information</strong></h6>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingnameInput" placeholder="type here" value="2">
+                                            <label for="floatingnameInput">Number of places</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingnameInput" placeholder="type here" value="2">
+                                            <label for="floatingnameInput">Number of places</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingnameInput" placeholder="type here" value="2">
+                                            <label for="floatingnameInput">Price (inc. VAT)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea class="form-control" id="" cols="2" rows="2">
+                                            
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
-                
+                <div class="tab-pane" id="messages-1" role="tabpanel">
+                    <p class="mb-0">
+                        Etsy mixtape wayfarers, ethical wes anderson tofu before they
+                        sold out mcsweeney's organic lomo retro fanny pack lo-fi
+                        farm-to-table readymade. Messenger bag gentrify pitchfork
+                        tattooed craft beer, iphone skateboard locavore carles etsy
+                        salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                        Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+                        mi whatever gluten-free.
+                    </p>
+                </div>
+                <div class="tab-pane" id="settings-1" role="tabpanel">
+                    <p class="mb-0">
+                        Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                        art party before they sold out master cleanse gluten-free squid
+                        scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                        art party locavore wolf cliche high life echo park Austin. Cred
+                        vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                        farm-to-table.
+                    </p>
+                </div>
             </div>
 
             <div class="modal-footer">
