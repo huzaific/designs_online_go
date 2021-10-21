@@ -21,6 +21,9 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        
+        <!-- Custom css -->
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -421,141 +424,375 @@
                         </div>
                         <!-- end page title -->
 
-                        <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title">Create new event</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <label class="col-xs-4" for="title">Event title</label>
-                                                <input type="text" name="title" id="title" />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Create New Event Popup</h4>
+                                <p class="card-title-desc">Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.</p>
+                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal">Create Calendar Popup</button>
+
+                                <div id="myModal" class="modal bs-example-modal-lg fade" tabindex="-1" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h5 class="modal-title text-white" id="myLargeModalLabel">New Event</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <label class="col-xs-4" for="starts-at">Starts at</label>
-                                                <input type="text" name="starts_at" id="starts-at" />
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <label class="col-xs-4" for="ends-at">Ends at</label>
-                                                <input type="text" name="ends_at" id="ends-at" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" id="save-event">Save changes</button>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                        </div><!-- /.modal -->
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div id="lnb">
-                                            
-
-                                            <div id="right">
-                                                <div id="menu" class="mb-3">
-                                                    
-                                                    <span id="menu-navi" class="d-sm-flex flex-wrap text-center text-sm-start justify-content-sm-between">
-                                                        <div class="d-sm-flex flex-wrap gap-1">
-                                                            <div class="btn-group mb-2" role="group" aria-label="Basic example">
-                                                                <button type="button" class="btn btn-primary move-day" data-action="move-prev">
-                                                                    <i class="calendar-icon ic-arrow-line-left mdi mdi-chevron-left" data-action="move-prev"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary move-day" data-action="move-next">
-                                                                    <i class="calendar-icon ic-arrow-line-right mdi mdi-chevron-right" data-action="move-next"></i>
-                                                                </button>
-                                                            </div>
-                                                        
-                                                        <button type="button" class="btn btn-primary move-today mb-2" data-action="move-today">Today</button>
-                                                        </div>
-
-                                                        <h4 id="renderRange" class="render-range fw-bold pt-1 mx-3"></h4>
-
-                                                        <div class="dropdown align-self-start mt-3 mt-sm-0 mb-2">
-                                                            <button id="dropdownMenu-calendarType" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                                aria-haspopup="true" aria-expanded="true">
-                                                                <i id="calendarTypeIcon" class="calendar-icon ic_view_month" style="margin-right: 4px;"></i>
-                                                                <span id="calendarTypeName">Dropdown</span>&nbsp;
-                                                                <i class="calendar-icon tui-full-calendar-dropdown-arrow"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="dropdownMenu-calendarType">
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-daily">
-                                                                        <i class="calendar-icon ic_view_day"></i>Daily
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-weekly">
-                                                                        <i class="calendar-icon ic_view_week"></i>Weekly
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-monthly">
-                                                                        <i class="calendar-icon ic_view_month"></i>Month
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-weeks2">
-                                                                        <i class="calendar-icon ic_view_week"></i>2 weeks
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-weeks3">
-                                                                        <i class="calendar-icon ic_view_week"></i>3 weeks
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation" class="dropdown-divider"></li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-workweek">
-                                                                        <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-workweek" checked>
-                                                                        <span class="checkbox-title"></span>Show weekends
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-start-day-1">
-                                                                        <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-start-day-1">
-                                                                        <span class="checkbox-title"></span>Start Week on Monday
-                                                                    </a>
-                                                                </li>
-                                                                <li role="presentation">
-                                                                    <a class="dropdown-item" role="menuitem" data-action="toggle-narrow-weekend">
-                                                                        <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-narrow-weekend">
-                                                                        <span class="checkbox-title"></span>Narrower than weekdays
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </span>
-                                                    
+                                            <div class="modal-body p-0">
+                                                <div class="row mb-3">
+                                                    <div class="col-lg-12">          
+                                                        <!-- Nav tabs -->
+                                                        <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
+                                                            <li class="nav-item waves-effect waves-light">
+                                                                <a class="nav-link active" data-bs-toggle="tab" href="#Notification" role="tab">
+                                                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                                                    <span class="d-none d-sm-block">Notification</span> 
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item waves-effect waves-light">
+                                                                <a class="nav-link" data-bs-toggle="tab" href="#Activity" role="tab">
+                                                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                                                    <span class="d-none d-sm-block">Activity</span> 
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item waves-effect waves-light">
+                                                                <a class="nav-link" data-bs-toggle="tab" href="#drivingtime" role="tab">
+                                                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                                    <span class="d-none d-sm-block">Driving Time</span>   
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item waves-effect waves-light">
+                                                                <a class="nav-link" data-bs-toggle="tab" href="#Package" role="tab">
+                                                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                                                    <span class="d-none d-sm-block">Package</span>    
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item waves-effect waves-light">
+                                                                <a class="nav-link" data-bs-toggle="tab" href="#Course" role="tab">
+                                                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                                                    <span class="d-none d-sm-block">Course</span>    
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item waves-effect waves-light">
+                                                                <a class="nav-link" data-bs-toggle="tab" href="#Other" role="tab">
+                                                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                                                    <span class="d-none d-sm-block">Other</span>    
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                                
+           <!-- Tab panes -->
+            <div class="tab-content p-3 text-muted">
+                <div class="tab-pane active" id="Notification" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <form action="" class="product-class-left">
+                                <h6><strong>Point</strong></h6>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingnameInput" placeholder="Date" value="13.06.2021">
+                                    <label for="floatingnameInput">Date</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="time" class="form-control" id="floatingnameInput" placeholder="Time" value="08:30">
+                                    <label for="floatingnameInput">Time</label>
+                                </div>
+                                <h6><strong>Notification</strong></h6>
+                                <textarea class="form-control" id="" cols="4" rows="4" placeholder="Enter Message ..."></textarea>
+                            </form>
+                            <div class="alert alert-info mt-3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, a, ipsa aspernatur, dolorem voluptates eveniet.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="product-class-left mb-3">
+                                <h5><strong>People</strong></h5>
 
-                                            <div class="lnb-new-schedule float-sm-end ms-sm-3 mt-4 mt-sm-0">
-                                                <button id="btn-new-schedule" type="button" class="btn btn-primary lnb-new-schedule-btn" data-toggle="modal">
-                                                    New schedule</button>
-                                            </div>
-                                            <div id="calendarList" class="lnb-calendars-d1 mt-4 mt-sm-0 me-sm-0 mb-4"></div>
-                                            
-                                            
-                                            <div id="calendar" style="height: 800px;"></div>
-                                            
-                                        </div>
+                                <form action="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="chooseall">
+                                        <label class="form-check-label" for="chooseall">
+                                          Choose all
+                                        </label>
                                     </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="mdarif" checked>
+                                        <label class="form-check-label" for="mdarif">
+                                          Md Arif
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="espenholmstrand">
+                                        <label class="form-check-label" for="espenholmstrand">
+                                          Espen Holmstrand
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tab-pane" id="Activity" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="product-class-left mb-3">
+                                <h6><strong>Personal Activity</strong></h6>
+                                <form action="">
+                                    <div class="form-group mb-3">
+                                        <select name="" id="" class="form-control">
+                                            <option value="-0">-Select activity -</option>
+                                            <option value="1">Product Activity One</option>
+                                            <option value="2">Product Activity Two</option>
+                                            <option value="3">Product Activity Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="" cols="4" rows="4" placeholder="Enter Comment ..."></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <form action="" class="product-class-left">
+                                <h6><strong>Time Period</strong></h6>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                    <label class="form-check-label" for="inlineRadio1">Man</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Tir</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+                                    <label class="form-check-label" for="inlineRadio3">We</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2">
+                                    <label class="form-check-label" for="inlineRadio4">Dare</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option2">
+                                    <label class="form-check-label" for="inlineRadio5">Fri.</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option2">
+                                    <label class="form-check-label" for="inlineRadio6">Sat.</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option2">
+                                    <label class="form-check-label" for="inlineRadio7">Son.</label>
+                                </div>
+
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingnameInput" placeholder="Date" value="13.06.2021">
+                                    <label for="floatingnameInput">Date</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="time" class="form-control" id="floatingnameInput" placeholder="Time" value="08:30">
+                                    <label for="floatingnameInput">Time</label>
+                                </div>
+                                <h6><strong>Employee hours</strong></h6>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingnameInput" placeholder="Employee hours" value="0">
+                                    <label for="floatingnameInput">Employee hours</label>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="product-class-left mb-3">
+                                <h5><strong>Owner of the acvitiy</strong></h5>
+                                <select class="form-control" id="">
+                                    <option value="-1">- Please select owner - </option>
+                                    <option value="1" selected>Md Arif</option>
+                                </select>
+                            </div>
+                            <div class="product-class-left mb-3">
+                                <h5><strong>People</strong></h5>
+                                <form action="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="chooseall">
+                                        <label class="form-check-label" for="chooseall">
+                                          Choose all
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="mdarif" checked>
+                                        <label class="form-check-label" for="mdarif">
+                                          Md Arif
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="espenholmstrand">
+                                        <label class="form-check-label" for="espenholmstrand">
+                                          Espen Holmstrand
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tab-pane" id="drivingtime" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>quisquam quibusdam sunt dolore quas fugiat tempore nobis iure amet atque excepturi?</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>excepturi harum ut eligendi saepe libero tenetur tempora cumque temporibus impedit. Obcaecati?</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tab-pane" id="Package" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>quisquam quibusdam sunt dolore quas fugiat tempore nobis iure amet atque excepturi?</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>excepturi harum ut eligendi saepe libero tenetur tempora cumque temporibus impedit. Obcaecati?</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tab-pane" id="Course" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>quisquam quibusdam sunt dolore quas fugiat tempore nobis iure amet atque excepturi?</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>excepturi harum ut eligendi saepe libero tenetur tempora cumque temporibus impedit. Obcaecati?</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tab-pane" id="Other" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>quisquam quibusdam sunt dolore quas fugiat tempore nobis iure amet atque excepturi?</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>excepturi harum ut eligendi saepe libero tenetur tempora cumque temporibus impedit. Obcaecati?</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
                                 </div>
                             </div>
                         </div>
-                        <!-- end row -->
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="lnb">
+                                    
+
+                                    <div id="right">
+                                        <div id="menu" class="mb-3">
+                                            
+                                            <span id="menu-navi" class="d-sm-flex flex-wrap text-center text-sm-start justify-content-sm-between">
+                                                <div class="d-sm-flex flex-wrap gap-1">
+                                                    <div class="btn-group mb-2" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-primary move-day" data-action="move-prev">
+                                                            <i class="calendar-icon ic-arrow-line-left mdi mdi-chevron-left" data-action="move-prev"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary move-day" data-action="move-next">
+                                                            <i class="calendar-icon ic-arrow-line-right mdi mdi-chevron-right" data-action="move-next"></i>
+                                                        </button>
+                                                    </div>
+                                                
+                                                <button type="button" class="btn btn-primary move-today mb-2" data-action="move-today">Today</button>
+                                                </div>
+
+                                                <h4 id="renderRange" class="render-range fw-bold pt-1 mx-3"></h4>
+
+                                                <div class="dropdown align-self-start mt-3 mt-sm-0 mb-2">
+                                                    <button id="dropdownMenu-calendarType" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="true">
+                                                        <i id="calendarTypeIcon" class="calendar-icon ic_view_month" style="margin-right: 4px;"></i>
+                                                        <span id="calendarTypeName">Dropdown</span>&nbsp;
+                                                        <i class="calendar-icon tui-full-calendar-dropdown-arrow"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="dropdownMenu-calendarType">
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-daily">
+                                                                <i class="calendar-icon ic_view_day"></i>Daily
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-weekly">
+                                                                <i class="calendar-icon ic_view_week"></i>Weekly
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-monthly">
+                                                                <i class="calendar-icon ic_view_month"></i>Month
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-weeks2">
+                                                                <i class="calendar-icon ic_view_week"></i>2 weeks
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-weeks3">
+                                                                <i class="calendar-icon ic_view_week"></i>3 weeks
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation" class="dropdown-divider"></li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-workweek">
+                                                                <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-workweek" checked>
+                                                                <span class="checkbox-title"></span>Show weekends
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-start-day-1">
+                                                                <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-start-day-1">
+                                                                <span class="checkbox-title"></span>Start Week on Monday
+                                                            </a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a class="dropdown-item" role="menuitem" data-action="toggle-narrow-weekend">
+                                                                <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-narrow-weekend">
+                                                                <span class="checkbox-title"></span>Narrower than weekdays
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="lnb-new-schedule float-sm-end ms-sm-3 mt-4 mt-sm-0">
+                                        <button id="btn-new-schedule" type="button" class="btn btn-primary lnb-new-schedule-btn" data-toggle="modal">
+                                            New schedule</button>
+                                    </div>
+                                    <div id="calendarList" class="lnb-calendars-d1 mt-4 mt-sm-0 me-sm-0 mb-4"></div>
+                                    
+                                    
+                                    <div id="calendar" style="height: 800px;"></div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
                         
                     </div> <!-- container-fluid -->
                 </div>
