@@ -261,3 +261,6 @@ ul.driving-time-tabdetails li input {
   .switch-green > .switch-input:checked ~ .switch-label {
     background: #4fb845;
   }
+  .c-courses-table table thead th {
+        font-size: 11px;
+    }
