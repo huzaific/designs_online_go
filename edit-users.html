@@ -17,7 +17,8 @@
     <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/libs/@chenfengyuan/datepicker/datepicker.min.css">
-
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -430,7 +431,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item waves-effect waves-light">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#class-1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
                                                     <span class="d-none d-sm-block">Class</span>    
                                                 </a>
@@ -980,16 +981,225 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="messages-1" role="tabpanel">
-                        <p class="mb-0">
-                            Etsy mixtape wayfarers, ethical wes anderson tofu before they
-                            sold out mcsweeney's organic lomo retro fanny pack lo-fi
-                            farm-to-table readymade. Messenger bag gentrify pitchfork
-                            tattooed craft beer, iphone skateboard locavore carles etsy
-                            salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
-                            Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
-                            mi whatever gluten-free.
-                        </p>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Your Signature</h4>
+                                        <p class="card-title-desc">DropzoneJS is an open source library
+                                            that provides drag’n’drop file uploads with image previews.
+                                        </p>
+        
+                                        <div>
+                                            <form action="#" class="dropzone">
+                                                <div class="fallback">
+                                                    <input name="file" type="file" multiple="multiple">
+                                                </div>
+                                                <div class="dz-message needsclick">
+                                                    <div class="mb-3">
+                                                        <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                    </div>
+                                                    
+                                                    <h4>Drop files here or click to upload.</h4>
+                                                </div>
+                                            </form>
+                                        </div>
+        
+                                        <div class="text-center mt-4">
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">Submit Your File</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="tab-pane" id="class-1" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="add_table" class="table align-items-center justify-content-center align-middle" data-toggle="table" data-mobile-responsive="true">
+                                            <thead>
+                                              <tr>
+                                                <th>Monday</th>
+                                                <th>Duration</th>
+                                                <th>Student Booking</th>
+                                                <th>Class Booking</th>
+                                               
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+
+                                              <tr class="align-items-center">
+                                                <td style="width: 30%;">
+                                                    <div class="row align-items-center">
+                                                        <button class="btn btn-danger delete_row col-md-2"><i class="bx bx-window-close"></i></button>
+                                                        <div class="form-group col-md-3">
+                                                            <input type="text" class="form-control" id="inputZip">
+                                                        </div>
+                                                        -
+                                                        <div class="form-group col-md-3">
+                                                            <input type="text" class="form-control" id="inputZip">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                  <p>1:30</p>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" id="containerR" type="checkbox" name="containerR" style=" width: 30px;height: 30px;">
+                                                    </div>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="B" data-off="B"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input"><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="BAut" data-off="BAut"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input"><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="TG" data-off="TG"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input"><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="TG" data-off="TG"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                              </tr>
+
+                                              <tr class="align-items-center">
+                                                <td style="width: 30%;">
+                                                    <div class="row align-items-center">
+                                                        <button class="btn btn-danger delete_row col-md-2"><i class="bx bx-window-close"></i></button>
+                                                        <div class="form-group col-md-3">
+                                                            <input type="text" class="form-control" id="inputZip" value="17:30">
+                                                        </div>
+                                                        -
+                                                        <div class="form-group col-md-3">
+                                                            <input type="text" class="form-control" id="inputZip" value="18:30">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                  <p>1:30</p>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" id="containerR" type="checkbox" name="containerR" style=" width: 30px;height: 30px;" checked>
+                                                    </div>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="B" data-off="B"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input"><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="BAut" data-off="BAut"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input"><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="TG" data-off="TG"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="TG" data-off="TG"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                              </tr>
+
+                                              <tr class="align-items-center">
+                                                <td style="width: 30%;">
+                                                    <div class="row align-items-center">
+                                                        <button class="btn btn-danger delete_row col-md-2"><i class="bx bx-window-close"></i></button>
+                                                        <div class="form-group col-md-3">
+                                                            <input type="text" class="form-control" id="inputZip">
+                                                        </div>
+                                                        -
+                                                        <div class="form-group col-md-3">
+                                                            <input type="text" class="form-control" id="inputZip">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                  <p>1:30</p>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" id="containerR" type="checkbox" name="containerR" style=" width: 30px;height: 30px;">
+                                                    </div>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="B" data-off="B"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="BAut" data-off="BAut"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="TG" data-off="TG"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mr-0">
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="switch-input" checked><!--<i class="icon-play"></i>-->
+                                                            <span class="switch-label" data-on="TG" data-off="TG"></span>
+                                                            <span class="switch-handle"></span>
+                                                          </label>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                              </tr>
+
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
@@ -1094,5 +1304,7 @@
     <!-- Custom js -->
     <script src="assets/js/custom.js"></script>
 
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 </body>
 </html>
