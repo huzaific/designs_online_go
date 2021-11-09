@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8" />
+    <title>Manage Courses | OnlineGo - Online Traffikskole</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/@chenfengyuan/datepicker/datepicker.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/gologo.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/gologo.svg" alt="" height="17">
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/gologo.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/OnlineGo-Light.svg" alt="" height="19">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-search-dropdown">
+    
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
+                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
+                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
+                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
+                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-customize"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                            <div class="px-lg-2">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/github.png" alt="Github">
+                                            <span>GitHub</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                            <span>Bitbucket</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                            <span>Dribbble</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                            <span>Dropbox</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                            <span>Mail Chimp</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/slack.png" alt="slack">
+                                            <span>Slack</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                            <i class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-bell bx-tada"></i>
+                            <span class="badge bg-danger rounded-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bx-cart"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <img src="assets/images/users/avatar-3.jpg"
+                                            class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <img src="assets/images/users/avatar-4.jpg"
+                                            class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
+                            <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                            <i class="bx bx-cog bx-spin"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title" key="t-menu">Menu</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i>
+                                <span key="t-dashboards">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">Apps</li>
+
+                        <li>
+                            <a href="chat.html" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span key="t-chat">Chat</span>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-email">Send  Email/SMS</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="email-inbox.html" key="t-inbox">Inbox</a></li>
+                                <li><a href="email-read.html" key="t-read-email">Read Email</a></li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge rounded-pill badge-soft-success float-end" key="t-new">New</span>
+                                        <span key="t-email-templates">Templates</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="email-template-basic.html" key="t-basic-action">Basic Action</a></li>
+                                        <li><a href="email-template-alert.html" key="t-alert-email">Alert Email</a></li>
+                                        <li><a href="email-template-billing.html" key="t-bill-email">Billing Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-maange-school">School Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-school.html" key="t-inbox">Manage School</a></li>
+                                <li><a href="add-school.html" key="t-read-email">Add New School</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-certification"></i>
+                                <span key="t-maange-courses">Courses Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-courses.html" key="t-maange-courses">Manage Courses</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-maange-courses">Add New Course</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-user-plus"></i>
+                                <span key="t-maange-teacher">Teacher Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-teacher.html" key="t-inbox">Manage Teacher</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-user-pin"></i>
+                                <span key="t-maange-student">Student Manage</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="manage-student.html" key="t-inbox">Manage Student</a></li>
+                                <li><a href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="courseovervoew.html">
+                                <i class="bx bx-user-pin"></i>
+                                <span key="t-course-overview">Course Overview</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bookingcourse.html">
+                                <i class="bx bx-grid-alt"></i>
+                                <span key="t-course-overview">Booking Course</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-user-plus"></i>
+                                <span key="t-tsk-list">Task list</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="tsk-list.html" key="t-tsklist">Tsk list</a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" href="javascript:void(0)" key="t-read-email">Add New Teacher</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Report Overview</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Manage Overview</a></li>
+                                        <li class="breadcrumb-item active">TSK List Overview</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <!-- Top card -->
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                                        <option value="-0">Please Select</option>
+                                                        <option value="1" selected>Not Approve Training</option>
+                                                        <option value="1">Approve Training</option>
+                                                        
+                                                    </select>
+                                                    <label for="floatingSelectGrid">Please Select Option</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                                        <option value="-0">Please Select</option>
+                                                        <option value="1" selected>All Clases</option>
+                                                        <option value="1">Class B</option>
+                                                        
+                                                    </select>
+                                                    <label for="floatingSelectGrid">Please Select Option</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                                        <option value="-0">Please Select</option>
+                                                        <option value="1" selected>Jesica Hansen</option>
+                                                        <option value="1">Class B</option>
+                                                        
+                                                    </select>
+                                                    <label for="floatingSelectGrid">Please Select Option</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Courses -->
+                        <div class="col-lg-12 mb-3">
+                            <button type="button" class="btn btn-primary waves-effect"><i class="bx bx-download font-size-16 align-middle me-2"></i>Download Report</button>
+                            <button type="button" class="btn btn-primary waves-effect"><i class="bx bx-download font-size-16 align-middle me-2"></i>PDF</button>
+                            <button type="button" class="btn btn-primary waves-effect"><i class="bx bx-download font-size-16 align-middle me-2"></i>CSV/SPREADSHEET</button>
+                            <button type="button" class="btn btn-light waves-effect"><i class="bx bx-download font-size-16 align-middle me-2"></i>CSV/SPREADSHEET</button>
+                        </form>
+
+        </div>
+    </div>
+    
+                        <!-- right content -->
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-4">
+                                        <div class="me-2">
+                                            <!-- <h5 class="card-title mb-1">Courses Details</h5> -->
+                                        </div>
+                                    </div>
+                                    <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                                        <thead>
+                                        <tr>
+                                            <th>Sl.</th>
+                                            <th>Student</th>
+                                            <th>Car</th>
+                                            <th>E-Post</th>
+                                            <th>Address</th>
+                                            <th>Great</th>
+                                            <th>C. Start</th>
+                                            <th>C. End</th>
+                                            <th>Activity</th>
+                                            <th>Teacher</th>
+                                            <th>P. time</th>
+                                            <th>Time</th>
+                                        </tr>
+                                        </thead>
+    
+    
+                                        <tbody>
+                                        
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="tsk-result.html">Student Name one</a></td>
+                                            <td>Toyota Preimum</td>
+                                            <td>student@onlinego.no</td>
+                                            <td>Kopervik, Norway</td>
+                                            <td>B</td>
+                                            <td>18.06.2021</td>
+                                            <td>18.06.2021</td>
+                                            <td>Active</td>
+                                            <td>16:40 2021</td>
+                                            <td>Jesica Hensan</td>
+                                            <td>14:10 2021</td>
+                                            
+                                        </tr>
+                                        
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        
+                    </div><!-- End row -->
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+             <!-- Add Course Backdrop Modal -->
+             <div class="modal fade bs-Course-modal-lg" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h5 class="modal-title text-white" id="myLargeModalLabel">First aid (TG, B, BAut)</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="row mb-3 p-0">
+                            <div class="col-lg-12">          
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified" role="tablist" style="background: #eee; font-size: 12px;">
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#Booking" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                            <span class="d-none d-sm-block">Booking (0)</span> 
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                            <span class="d-none d-sm-block">Generally</span> 
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                            <span class="d-none d-sm-block">Participants (2)</span>   
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Settings</span>    
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Training</span>    
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Messages</span>    
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    <div class="modal-body">
+        <form>
+            <!-- Tab panes -->
+            <div class="tab-content p-3 text-muted">
+                <div class="tab-pane active" id="Booking" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="mb-3 product-class-left">
+                                <div class="form-group mb-3">
+                                    <label for="Add course Participant">Add course Participant</label>
+                                    <input type="text" class="form-control" value="Add course Participant">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <select class="form-control form-control select2" id="AddProductClass" style="width: 260px; display: block;">
+                                        <option value="Class_A">Class A</option>
+                                        <option value="Class_B">Class B</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Add when searching by name, date of birth">
+                                </div>
+        
+                            </div>
+                            <div class="mb-3 product-class-left">
+                                <div class="partcipant_list">
+                                    <ul>
+                                        <li><strong>Course Participants</strong></li>
+                                        <li>Lejla Mujanovic (BAut) <span class="text-danger">4,490.00</span></li>
+                                        <li>Emil Ormaan vallenes (BAut) <span class="text-danger">4,590.00</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-3 bg-info text-white p-3">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab nam nemo optio aspernatur placeat incidunt, exercitationem.</p>
+                            </div>
+                            <div class="mb-3 product-class-left">
+                                <h4 class="card-title mb-3">Multikurs</h4>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="container" type="checkbox" name="container">
+                                    <label class="form-check-label" for="container">
+                                        Class B
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="containerA" type="checkbox" name="containerA" checked>
+                                    <label class="form-check-label" for="containerA">
+                                        Class BAut
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-7">
+                            <div class="mb-3 product-class-right">
+                                <table class="table align-middle table-nowrap mb-0">
+                                    <thead>
+                                        <th><span> <i class="bx bx-edit"></i> </span></th>
+                                        <th>Course day</th>
+                                        <th>Starting at.</th>
+                                        <th>Until</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>21.09.2021</td>
+                                            <td>08:45</td>
+                                            <td>15:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mb-3 product-class-right">
+                                <label for=""><strong>Meeting places (Incl. in SMS)</strong></label>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <select name="" id="" class="form-control">
+                                            <option value="#">Select class</option>
+                                            <option value="#">Class A</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" placeholder="Type your own text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 bg-info p-3 text-white">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut iusto pariatur aspernatur ad, cupiditate voluptatem aliquam ut obcaecati debitis, deserunt dolor rerum eum illo veritatis? Sit nostrum iusto alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut iusto pariatur aspernatur ad, cupiditate voluptatem aliquam ut obcaecati debitis, deserunt dolor rerum eum illo veritatis? Sit nostrum iusto alias!</p>
+                            </div>
+                            <div class="mb-3 product-class-right">
+                                <h6><strong>Booking Details </strong></h6>
+                                <table>
+                                    <tr>
+                                        <th>Bane</th>
+                                        <td>Tysver</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>Two students par car</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Reservation time</th>
+                                        <td>29.12.2021</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bookingref</th>
+                                        <td>4173333</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tel</th>
+                                        <td>4055521</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="mb-3 bg-info p-3 text-white">
+                                <p>cupiditate voluptatem aliquam ut obcaecati debitis, deserunt dolor rerum eum illo veritatis? Sit nostrum iusto alias!!</p>
+                            </div>
+                            <div class="mb-3 product-class-right">
+                                <h6><strong>Course Information</strong></h6>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingnameInput" placeholder="type here" value="2">
+                                            <label for="floatingnameInput">Number of places</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingnameInput" placeholder="type here" value="2">
+                                            <label for="floatingnameInput">Number of places</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingnameInput" placeholder="type here" value="2">
+                                            <label for="floatingnameInput">Price (inc. VAT)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea class="form-control" id="" cols="2" rows="2">
+                                            
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tab-pane" id="messages-1" role="tabpanel">
+                    <p class="mb-0">
+                        Etsy mixtape wayfarers, ethical wes anderson tofu before they
+                        sold out mcsweeney's organic lomo retro fanny pack lo-fi
+                        farm-to-table readymade. Messenger bag gentrify pitchfork
+                        tattooed craft beer, iphone skateboard locavore carles etsy
+                        salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                        Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+                        mi whatever gluten-free.
+                    </p>
+                </div>
+                <div class="tab-pane" id="settings-1" role="tabpanel">
+                    <p class="mb-0">
+                        Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                        art party before they sold out master cleanse gluten-free squid
+                        scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                        art party locavore wolf cliche high life echo park Austin. Cred
+                        vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                        farm-to-table.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div>
+
+
+
+            <!-- Modal -->
+            <div class="modal fade bs-CustomProduct-modal-lg" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="composemodalTitle">New Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form action="">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Select Class">Please select class</label>
+                                                <select name="" id="" class="form-control select2-search" style="width: 100%;">
+                                                    <option value="-0">Select Class</option>
+                                                    <option value="1">Class A</option>
+                                                    <option value="1">Class B</option>
+                                                    <option value="1">Class C</option>
+                                                    <option value="1">Class D</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Select Class">Please select type</label>
+                                                <select name="" id="" class="form-control select2-search" style="width: 100%;">
+                                                    <option value="-0">Select Class</option>
+                                                    <option value="1">Driving Time</option>
+                                                    <option value="1">Driving Time two</option>
+                                                    <option value="1">Driviing Time Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Full name">Type your name</label>
+                                                <input type="text" class="form-control" placeholder="type your name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <div class="form-group">
+                                                    <label for="Price">Price</label>
+                                                    <input type="text" class="form-control" placeholder="Price">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <div class="form-group">
+                                                    <label for="Price">Vat%</label>
+                                                    <input type="text" class="form-control" placeholder="%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                <label for="Duration">Duration</label>
+                                                <input type="text" class="form-control" placeholder="Duration in minutes">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send <i class="fab fa-telegram-plane ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+            
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © OnlineGo.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Combrokers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div data-simplebar class="h-100">
+            <div class="rightbar-title d-flex align-items-center px-3 py-4">
+        
+                <h5 class="m-0 me-2">Settings</h5>
+
+                <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                    <i class="mdi mdi-close noti-icon"></i>
+                </a>
+            </div>
+
+            <!-- Settings -->
+            <hr class="mt-0" />
+            <h6 class="text-center mb-0">Choose Layouts</h6>
+
+            <div class="p-4">
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
+                    <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css">
+                    <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="form-check form-switch mb-5">
+                    <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css">
+                    <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+        
+            </div>
+
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <script src="assets/libs/select2/js/select2.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- form advanced init -->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+</html>
